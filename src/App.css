@@ -1,0 +1,229 @@
+/* ============================================================
+   App shell — layout, hero, footer. Prefix: app-
+   ============================================================ */
+
+.app-root {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- hero ---------- */
+
+.app-hero {
+  position: relative;
+  text-align: center;
+  padding: 44px 0 40px;
+}
+
+.app-hero-emoji {
+  display: inline-block;
+  font-size: 52px;
+  line-height: 1;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 14px 20px rgba(147, 130, 190, 0.3));
+}
+
+.app-title {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.app-gradient-text {
+  background: linear-gradient(90deg, var(--lavender), var(--rose), var(--peach));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.app-swiss-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 158, 200, 0.45);
+  background: var(--rose-soft);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.app-swiss-flag {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.app-subtitle {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 540px;
+  margin: 12px auto 0;
+  line-height: 1.5;
+}
+
+/* ---------- header actions (ghost pills) ---------- */
+
+.app-actions {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.app-share {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--mint);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    background 0.25s var(--ease-out),
+    color 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out);
+}
+
+.app-share:hover {
+  background: var(--mint-soft);
+  color: var(--ink);
+  box-shadow: var(--shadow-pop);
+}
+
+.app-share:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 3px;
+}
+
+.app-share-copied {
+  background: var(--mint-soft);
+  color: var(--buy-strong);
+  border-color: var(--buy);
+}
+
+.app-reset {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--lavender);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    background 0.25s var(--ease-out),
+    color 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out);
+}
+
+.app-reset:hover {
+  background: var(--lavender-soft);
+  color: var(--ink);
+  box-shadow: var(--shadow-pop);
+}
+
+.app-reset:focus-visible {
+  outline: 2px solid var(--lavender);
+  outline-offset: 3px;
+}
+
+/* ---------- main grid ---------- */
+
+.app-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 420px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.app-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app-col-inputs {
+  gap: 20px;
+}
+
+.app-col-results {
+  gap: 20px;
+  position: sticky;
+  top: 24px;
+}
+
+/* ---------- philosophy section extras ---------- */
+
+.app-philosophy-intro {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.app-options-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ---------- footer ---------- */
+
+.app-footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-faint);
+  padding: 48px 0 20px;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 980px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-col-results {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-root {
+    padding: 12px;
+  }
+
+  .app-hero {
+    padding: 28px 0 26px;
+  }
+
+  .app-title {
+    font-size: 34px;
+  }
+
+  .app-hero-emoji {
+    font-size: 42px;
+  }
+
+  .app-actions {
+    position: static;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,30 @@
+.tg-root {
+  width: 48px;
+  height: 28px;
+  flex-shrink: 0;
+  padding: 3px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--lavender-soft);
+  transition: background 0.25s var(--ease-out);
+}
+
+.tg-root.tg-on {
+  justify-content: flex-end;
+  background: var(--tg-accent);
+}
+
+.tg-knob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--card-solid);
+  box-shadow: 0 2px 6px rgba(63, 52, 89, 0.18);
+}
+
+.tg-root:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--tg-accent) 30%, transparent);
+}

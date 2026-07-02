@@ -1,0 +1,123 @@
+/* ============================================================
+   Design tokens — pastel dream palette 🌸
+   ============================================================ */
+:root {
+  /* pastel accents (strong + soft pair per hue) */
+  --lavender: #b39df2;
+  --lavender-soft: #ebe3ff;
+  --mint: #6fd6ae;
+  --mint-soft: #dcf6ea;
+  --peach: #ffab8a;
+  --peach-soft: #ffe8dc;
+  --sky: #8ec7ff;
+  --sky-soft: #e2f1ff;
+  --rose: #ff9ec8;
+  --rose-soft: #ffe3f0;
+  --butter: #ffd97a;
+  --butter-soft: #fff5d6;
+
+  /* semantic: buy = mint family, rent = peach family */
+  --buy: #2bbd8c;
+  --buy-strong: #17a377;
+  --buy-soft: #dcf6ea;
+  --rent: #ff8a63;
+  --rent-strong: #f0663a;
+  --rent-soft: #ffe8dc;
+
+  /* ink */
+  --ink: #3f3459;
+  --ink-soft: #7c709c;
+  --ink-faint: #aba0c8;
+
+  /* surfaces */
+  --bg: #faf7ff;
+  --card: rgba(255, 255, 255, 0.78);
+  --card-solid: #ffffff;
+  --card-border: rgba(179, 157, 242, 0.22);
+  --shadow-card: 0 12px 40px rgba(147, 130, 190, 0.14);
+  --shadow-card-hover: 0 18px 52px rgba(147, 130, 190, 0.22);
+  --shadow-pop: 0 6px 18px rgba(147, 130, 190, 0.25);
+
+  /* geometry */
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+
+  /* type */
+  --font: 'Outfit', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* motion */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+}
+
+input {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--lavender-soft);
+}
+
+/* soft pastel scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--lavender-soft);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lavender);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

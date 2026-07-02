@@ -1,0 +1,68 @@
+.sc-root {
+  background: var(--card);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.sc-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+  text-align: left;
+  border-radius: var(--radius-lg);
+  transition: background 0.2s var(--ease-out);
+}
+
+.sc-header:hover {
+  background: color-mix(in srgb, var(--sc-accent-soft) 30%, transparent);
+}
+
+.sc-header:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--sc-accent) 35%, transparent);
+  outline-offset: -3px;
+}
+
+.sc-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--sc-accent-soft);
+  font-size: 18px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+
+.sc-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.sc-chevron {
+  flex-shrink: 0;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--ink-faint);
+  display: inline-grid;
+  place-items: center;
+}
+
+.sc-body {
+  overflow: hidden;
+}
+
+.sc-body-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 6px 22px 24px;
+}

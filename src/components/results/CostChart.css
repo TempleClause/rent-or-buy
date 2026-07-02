@@ -1,0 +1,101 @@
+.cc-card {
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 26px 28px 20px;
+}
+
+.cc-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cc-caption {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+  margin-bottom: 16px;
+}
+
+.cc-chart {
+  width: 100%;
+}
+
+/* axis ticks — CSS fill wins over the SVG presentation attribute */
+.cc-chart .recharts-cartesian-axis-tick text {
+  fill: var(--ink-faint);
+  font-size: 12px;
+  font-family: var(--font);
+  font-weight: 600;
+}
+
+/* ---- custom tooltip ---- */
+.cc-tip {
+  background: var(--card-solid);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-pop);
+  padding: 12px 14px;
+  font-size: 13px;
+  font-family: var(--font);
+  color: var(--ink);
+}
+
+.cc-tip-title {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.cc-tip-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  font-variant-numeric: tabular-nums;
+}
+
+.cc-tip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cc-tip-dot-rent {
+  background: var(--rent);
+}
+.cc-tip-dot-buy {
+  background: var(--buy);
+}
+
+.cc-zero-note {
+  overflow: hidden;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  background: var(--lavender-soft);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
+.cc-zero-note em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--buy-strong);
+}
+
+.cc-tip-delta {
+  margin-top: 6px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+.cc-tip-delta-buy {
+  color: var(--buy-strong);
+}
+.cc-tip-delta-rent {
+  color: var(--rent-strong);
+}

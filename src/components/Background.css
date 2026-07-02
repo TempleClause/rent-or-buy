@@ -1,0 +1,162 @@
+/* ============================================================
+   Ambient background — pastel dreamscape. Prefix: bgfx-
+   ============================================================ */
+
+.bgfx-root {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(160deg, var(--bg) 0%, #f2f6ff 45%, #fff5f0 100%);
+}
+
+/* ---------- drifting blobs ---------- */
+
+.bgfx-blob {
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(90px);
+  will-change: transform;
+}
+
+.bgfx-blob-lavender {
+  width: 52vw;
+  top: -18%;
+  left: -12%;
+  opacity: 0.6;
+  background: radial-gradient(circle at 50% 50%, var(--lavender-soft) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: bgfx-drift-a 34s ease-in-out -4s infinite alternate;
+}
+
+.bgfx-blob-mint {
+  width: 48vw;
+  bottom: -22%;
+  right: -10%;
+  opacity: 0.55;
+  background: radial-gradient(circle at 50% 50%, var(--mint-soft) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: bgfx-drift-b 40s ease-in-out -12s infinite alternate;
+}
+
+.bgfx-blob-peach {
+  width: 44vw;
+  top: -12%;
+  right: -14%;
+  opacity: 0.65;
+  background: radial-gradient(circle at 50% 50%, var(--peach-soft) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: bgfx-drift-c 28s ease-in-out -7s infinite alternate;
+}
+
+.bgfx-blob-sky {
+  width: 50vw;
+  bottom: -18%;
+  left: -16%;
+  opacity: 0.55;
+  background: radial-gradient(circle at 50% 50%, var(--sky-soft) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: bgfx-drift-d 44s ease-in-out -20s infinite alternate;
+}
+
+.bgfx-blob-rose {
+  width: 40vw;
+  top: 30%;
+  right: 18%;
+  opacity: 0.5;
+  background: radial-gradient(circle at 50% 50%, var(--rose-soft) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: bgfx-drift-e 26s ease-in-out -2s infinite alternate;
+}
+
+@keyframes bgfx-drift-a {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(8%, 6%) scale(1.15);
+  }
+}
+
+@keyframes bgfx-drift-b {
+  from {
+    transform: translate(0, 0) scale(1.12);
+  }
+  to {
+    transform: translate(-7%, 9%) scale(1);
+  }
+}
+
+@keyframes bgfx-drift-c {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-9%, -6%) scale(1.15);
+  }
+}
+
+@keyframes bgfx-drift-d {
+  from {
+    transform: translate(0, 0) scale(1.1);
+  }
+  to {
+    transform: translate(6%, -8%) scale(0.98);
+  }
+}
+
+@keyframes bgfx-drift-e {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(10%, 4%) scale(1.12);
+  }
+}
+
+/* ---------- barely-there floating emoji ---------- */
+
+.bgfx-sparkle {
+  position: absolute;
+  opacity: 0.12;
+  line-height: 1;
+  user-select: none;
+}
+
+.bgfx-sparkle-1 {
+  top: 16%;
+  left: 7%;
+  font-size: 34px;
+  animation: bgfx-float-a 14s ease-in-out infinite;
+}
+
+.bgfx-sparkle-2 {
+  top: 60%;
+  right: 6%;
+  font-size: 40px;
+  animation: bgfx-float-b 18s ease-in-out -6s infinite;
+}
+
+.bgfx-sparkle-3 {
+  bottom: 10%;
+  left: 24%;
+  font-size: 28px;
+  animation: bgfx-float-a 12s ease-in-out -3s infinite;
+}
+
+@keyframes bgfx-float-a {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(6deg);
+  }
+}
+
+@keyframes bgfx-float-b {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(4deg);
+  }
+  50% {
+    transform: translate(-14px, -18px) rotate(-5deg);
+  }
+}
