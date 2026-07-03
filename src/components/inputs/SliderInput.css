@@ -55,6 +55,10 @@
   background: var(--lavender-soft); /* fill gradient is set inline */
   outline: none;
   cursor: pointer;
+  /* Reserve vertical drags for page scrolling on touch devices — only
+     horizontal drags adjust the slider, so you can't grab a value by
+     accident while scrolling past it on mobile. */
+  touch-action: pan-y;
 }
 
 .si-range::-moz-range-track {
